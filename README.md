@@ -1,9 +1,25 @@
-# k8s-kafka-stream-hackafun
-sliding window example
-data creator app deployed to k8s published payment records to 'payments' topic.
-streams-payment-app consumes the messages and reports the total spend for an account within a sliding window.  The output is visible in the logs
+# Kafka Streams Windowing Examples
 
-## Setup
+Welcome to some simple examples of Kafka Streams Windowing capabilities.
+The project has a number of purposes
+- Demonstrate the basic bahaviours and differences in the Windowing options for Kafka Streams
+- Explores the windowing types using tests. 
+- Expand on the demonstration by creating a K8s environment in minikube that runs each of the window types
+
+## Window type examples & test
+The test in each window-app can be executed via your IDE and stepped through to provide an environment for exploring the behaviours of each window
+
+Build and Test using mvn
+```asciidoc
+mvn clean install
+```
+
+
+# Run in K8s - Setup
+It is possible to spin up each windowing app in minikube and see the windows in action.  
+The setup includes: a kafka instance (and zookeeper), a data generator, an app for each window type, and instructions on how to consume the events for a complete e2e demonstration
+
+For the K8s we will use minikube.  A download/install guide for minikube can be found here: https://minikube.sigs.k8s.io/docs/start/
 
 ### Start Minikube
 ```
@@ -22,7 +38,7 @@ minikube docker-env
 eval $(minikube -p minikube docker-env)
 ```
 
-Build the apps
+Build the apps.  Go to your checked out project and build with mvn.
 ```
 mvn clean install
 ```
