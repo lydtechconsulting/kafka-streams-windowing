@@ -2,7 +2,7 @@
 
 Welcome to some simple examples of Kafka Streams Windowing capabilities.
 The project has a number of purposes
-- Demonstrate the basic bahaviours and differences in the Windowing options for Kafka Streams
+- Demonstrate the basic behaviours and differences in the Windowing options for Kafka Streams
 - Explores the windowing types using tests. 
 - Expand on the demonstration by creating a K8s environment in minikube that runs each of the window types
 
@@ -44,7 +44,7 @@ mvn clean install
 ```
 
 Then rebuild the docker image which so that it’s installed in the minikube registry, instead of the local one.
-The script `dockerBuild.sh` will build all the apps for you.  If you wish to build the apps individually, just relevant copy the command from within this script
+The script `dockerBuild.sh` will build all the apps for you.  If you wish to build the apps individually, just copy the relevant command from within this script
 ```
 sh dockerBuild.sh
 ```
@@ -70,8 +70,8 @@ The deployment will be in the kafka-streams-windowing namespace.   Once the serv
 ## Observable Outputs....
 
 What can we see?
-data-creator logs contain records being emitted
-each window-app has logs containing: 
+The link-data-generator logs contain the records being emitted
+Each window-app has logs containing: 
 - a peek of the ingested record
 - a peek of the final event (window aggregation)
 

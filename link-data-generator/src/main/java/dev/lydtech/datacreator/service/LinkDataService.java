@@ -34,8 +34,6 @@ public class LinkDataService {
 
     @PostConstruct
     public void process() throws Exception {
-        log.info("Initializing the producer - Link gubbins to follow...");
-
         Integer numberOfLinks = 5;
 
         List<Link> links = generateLink(numberOfLinks);
